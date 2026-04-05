@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asociația X</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    height: 45px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('forest.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 64px;
+    color: red;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 14px 30px;
+    margin: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: red;
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: black;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: red;
+}
+
+/* FOREST SECTION */
+.forest {
+    background: url('forest_cut.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.forest::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+}
+
+.forest-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 12px;
+    background: #000;
+    color: gray;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo">
+    <nav>
+        <a href="#">Raport</a>
+        <a href="#">Păduri</a>
+        <a href="#">Membri</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>STOP. GATA. AJUNGE.</h1>
+        <h2>Nu facem politică. Construim politici publice.</h2>
+
+        <button class="btn btn-primary">VEZI RAPORTUL</button>
+        <button class="btn btn-secondary">DEVINO MEMBRU</button>
+    </div>
+</section>
+
+<section class="section">
+    <h2>APA • HRANA • ENERGIA</h2>
+    <p>Monitorul Costului Vieții</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>💧 Apă</h3>
+            <p>+62%</p>
+        </div>
+        <div class="card">
+            <h3>🍞 Hrană</h3>
+            <p>+68%</p>
+        </div>
+        <div class="card">
+            <h3>⚡ Energie</h3>
+            <p>+70%</p>
+        </div>
+    </div>
+</section>
+
+<section class="section forest">
+    <div class="forest-content">
+        <h2>STOP TĂIERILOR ILEGALE</h2>
+        <p>Pădurea este resursă națională.</p>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Devino membru</h2>
+    <p>Nu este despre protest. Este despre impact real.</p>
+    <button class="btn btn-primary">ÎNSCRIE-TE</button>
+</section>
+
+<div class="footer">
+    Asociația X International<br>
+    Date bazate pe Eurostat și INS
+</div>
+
+</body>
+</html>
